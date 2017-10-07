@@ -1,1 +1,52 @@
-{"info":{"title":"testapi1","description":"testapi1 descr","version":"1.0.0"},"openapi":"3.0.0"}
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "testapi1",
+    "description": "testapi1 descr",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/wallets": {
+      "get": {
+        "summary": "sf dsdf sdf sdf sdf sdf s",
+        "description": "get list of wallets"
+      },
+      "post": {
+        "description": "create wallet",
+        "responses": {
+          "200": {
+            "description": "Ð²ÑÑ Ð¿Ð¾Ð»ÑÑÐ¸Ð»Ð¾ÑÑ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemaswallet"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemaswallet"
+              }
+            }
+          },
+          "required": true
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "wallet": {
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
